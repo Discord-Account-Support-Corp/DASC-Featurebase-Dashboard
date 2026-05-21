@@ -21,14 +21,24 @@
       font-family: Arial, sans-serif;
     }
 
-    .card {
+    .container {
       text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      opacity: 0.7;
+      margin-bottom: 20px;
     }
 
     button {
       background: #5865F2;
       border: none;
-      padding: 14px 22px;
+      padding: 14px 24px;
       border-radius: 10px;
       color: white;
       font-size: 16px;
@@ -41,24 +51,23 @@
   </style>
 
   <script>
-    function openDashboard() {
-      window.location.href =
-        "https://discordaccountsupportcorporation.featurebase.app/dashboard/inbox/all";
-    }
+    const DASHBOARD_URL =
+      "https://discordaccountsupportcorporation.featurebase.app/dashboard/inbox/all";
 
-    // optional: preload connection (tiny speed boost)
-    const preconnect = document.createElement("link");
-    preconnect.rel = "preconnect";
-    preconnect.href = "https://discordaccountsupportcorporation.featurebase.app";
-    document.head.appendChild(preconnect);
+    function openDashboard() {
+      window.location.href = DASHBOARD_URL;
+    }
   </script>
 </head>
 
 <body>
-  <div class="card">
-    <h2>Support Dashboard</h2>
-    <p>Tap below to open</p>
-    <button onclick="openDashboard()">Open Dashboard</button>
+  <div class="container">
+    <h1>Support Dashboard</h1>
+    <p>Tap below to open your workspace</p>
+
+    <button onclick="openDashboard()">
+      Open Dashboard
+    </button>
   </div>
 </body>
 </html>
