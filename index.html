@@ -6,8 +6,7 @@
 
   <title>Support Dashboard</title>
 
-  <meta name="theme-color" content="#5865F2">
-  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://discordaccountsupportcorporation.featurebase.app">
 
   <style>
     body {
@@ -19,20 +18,6 @@
       background: #0f0f10;
       color: white;
       font-family: Arial, sans-serif;
-    }
-
-    .container {
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      margin-bottom: 8px;
-    }
-
-    p {
-      opacity: 0.7;
-      margin-bottom: 20px;
     }
 
     button {
@@ -51,23 +36,16 @@
   </style>
 
   <script>
-    const DASHBOARD_URL =
+    const URL =
       "https://discordaccountsupportcorporation.featurebase.app/dashboard/inbox/all";
 
     function openDashboard() {
-      window.location.href = DASHBOARD_URL;
+      window.location.replace(URL);
     }
   </script>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Support Dashboard</h1>
-    <p>Tap below to open your workspace</p>
-
-    <button onclick="openDashboard()">
-      Open Dashboard
-    </button>
-  </div>
+  <button onclick="openDashboard()">Open Dashboard</button>
 </body>
 </html>
